@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Haikal</title>
+    <link rel="stylesheet" href="style.css"> <!-- File CSS eksternal -->
+    <style>
+        /* Internal CSS untuk teks welcome */
+        .welcome-text {
+            color: rgb(41, 79, 193);
+            font-size: 80px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Halaman Awal -->
+    <div class="welcome-screen">
+        <h1 class="welcome-text">Teknologi Informasi
+        <p>Universitas Muhammadiyah Yogyakarta</h1>
+        <button class="main-btn" onclick="showProfile()">Lihat Profil</button>
+    </div>
+
+    <!-- Halaman Profil -->
+    <div class="profile-section" id="profileSection">
+        <div class="profile-card">
+            <img src="Haikal.png" alt="profile-photo" class="profile-photo">
+            <h2>Muhammad Haikal Azka</h2>
+            <p>Mahasiswa Semester 4 Program Sarjana Teknologi Informasi Universitas Muhammadiyah Yogyakarta. Sedang menempuh pendidikan pada mata perkuliahan semester 4
+               saat ini, salah satunya pengembangan desain web.</p>
+            <button class="back-btn" onclick="goBack()">Kembali</button>
+        </div>
+    </div>
+
+    <script>
+        function showProfile() {
+            document.querySelector(".welcome-screen").style.display = "none";
+            document.getElementById("profileSection").style.display = "flex";
+        }
+
+        function goBack() {
+            document.querySelector(".welcome-screen").style.display = "flex";
+            document.getElementById("profileSection").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
